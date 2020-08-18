@@ -1,4 +1,4 @@
-package com.mukundmadhav.springboot.springboot.dao;
+package com.greenway.dao;
 
 import java.util.List;
 
@@ -9,44 +9,43 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.mukundmadhav.springboot.springboot.modal.Employee;
+import com.greenway.modal.Business;
 
 @Repository
-public class EmployeeDAOImp implements EmployeeDAO {
+public class BusinessDAOImp implements BusinessDAO {
 
 	@Autowired
 	private EntityManager entityManager;
 
 	@Override
-	public List<Employee> get() {
+	public List<Business> get() {
 
 		Session currSession = entityManager.unwrap(Session.class);
-		Query<Employee> query = currSession.createQuery("from Employee", Employee.class);
-		List<Employee> list = query.getResultList();
+		Query<Business> query = currSession.createQuery("from Business", Business.class);
+		List<Business> list = query.getResultList();
 		return list;
 
 	}
 
 	@Override
-	public Employee get(int id) {
+	public Business get(int id) {
 		Session currSession = entityManager.unwrap(Session.class);
-		Employee emp = currSession.get(Employee.class, id);
-		return emp;
+		Business bus = currSession.get(Business.class, id);
+		return bus;
 	}
-
 	@Override
-	public void save(Employee employee) {
+	public void save(Business business) {
 		
 		Session currSession = entityManager.unwrap(Session.class);
-		currSession.saveOrUpdate(employee);
+		currSession.saveOrUpdate(business);
 
 	}
 
 	@Override
 	public void delete(int id) {
 		Session currSession = entityManager.unwrap(Session.class);
-		Employee emp = currSession.get(Employee.class, id);
-		currSession.delete(emp);
+		Business bus = currSession.get(Business.class, id);
+		currSession.delete(bus);
 
 	}
 

@@ -15,10 +15,10 @@ const useStyles = makeStyles({
     // maxWidth: 345,
     "margin-left": "10%",
     width: "80%",
-    "margin-top": "15%",
+    "margin-top": "5%",
   },
   media: {
-    height: 200,
+    height: 310,
   },
 });
 
@@ -45,10 +45,10 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" variant="contained" href="#contained-buttons">
           <Link to="/view"> View Businesses</Link>
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" variant="contained" href="#contained-buttons">
           <Link to="/add"> Add a Business</Link>
         </Button>
       </CardActions>

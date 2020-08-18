@@ -38,22 +38,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AddEmployee() {
+export default function AddBusiness() {
   const classes = useStyles();
   const [firstLoad, setLoad] = React.useState(true);
 
-  const [selectedDate, setSelectedDate] = React.useState(
-    ""
-    // new Date("1998-04-02T21:11:54")
-  );
+  const [review, setReview] = React.useState("");
   const [name, setName] = React.useState("");
-  const [department, setDepartment] = React.useState("");
-  const [gender, setGender] = React.useState("");
+  const [location, setLocation] = React.useState("");
+  const [link, setLink] = React.useState("");
 
-  const handleDateChange = (event) => setSelectedDate(event.target.value);
+  const handleReviewChange = (event) => setReview(event.target.value);
   const handleNameChange = (event) => setName(event.target.value);
-  const handlDepartmentChange = (event) => setDepartment(event.target.value);
-  const handleGenderChange = (event) => setGender(event.target.value);
+  const handleLocationChange = (event) => setLocation(event.target.value);
+  const handleLinkChange = (event) => setLink(event.target.value);
 
   const [message, setMessage] = React.useState("Nothing saved in the session");
 
@@ -77,11 +74,15 @@ export default function AddEmployee() {
   }
 
   const handleSubmit = (variables) => {
-    const toInput = { name, department, gender, dob: selectedDate };
+    // if error check field original below
+    // const toInput = { name, location, link, dob: selectedDate };
+    const toInput = { name, location, link, review };
     sampleFunc(toInput);
     setName("");
-    setDepartment("");
-    setGender("");
+    setLocation("");
+    setLink("");
+    // if error check field
+    setReview("");
   };
 
   if (firstLoad) {
@@ -121,15 +122,15 @@ export default function AddEmployee() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                autoComplete="department"
-                name="department"
+                autoComplete="location"
+                name="location"
                 variant="outlined"
                 required
                 fullWidth
-                value={department}
-                id="department"
+                value={location}
+                id="location"
                 label="Location"
-                onChange={handlDepartmentChange}
+                onChange={handleLocationChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -137,25 +138,25 @@ export default function AddEmployee() {
                 variant="outlined"
                 required
                 fullWidth
-                id="gender"
-                value={gender}
+                id="link"
+                value={link}
+                // if error check field
                 label="Link"
-                name="gender"
-                autoComplete="gender"
-                onChange={handleGenderChange}
+                name="link"
+                autoComplete="link"
+                onChange={handleLinkChange}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                id="date"
+                id="review"
                 label="Review"
-                // type="date"
                 defaultValue="The ice cream was bomb"
                 className={classes.textField}
                 InputLabelProps={{
                   shrink: true,
                 }}
-                onChange={handleDateChange}
+                onChange={handleReviewChange}
               />
             </Grid>
           </Grid>

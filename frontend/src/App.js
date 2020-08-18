@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AddEmployee from "./Components/AddEmployee";
+import AddBusiness from "./Components/AddBusiness";
 import { Route, Switch, HashRouter } from "react-router-dom";
 import Table from "./Components/Table";
 import Home from "./Components/Home";
@@ -10,7 +10,7 @@ class App extends Component {
       <HashRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/add" component={AddEmployee} />
+          <Route exact path="/add" component={AddBusiness} />
           <Route exact path="/view" component={Table} />
         </Switch>
       </HashRouter>

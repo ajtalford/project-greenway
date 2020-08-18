@@ -51,7 +51,7 @@ export default function SimpleTable() {
   let isLoading = true;
 
   async function sampleFunc() {
-    let response = await fetch("/api/employee");
+    let response = await fetch("/api/business");
     let body = await response.json();
     upDateData(body);
   }
@@ -92,9 +92,9 @@ export default function SimpleTable() {
               {data?.map((row) => (
                 <TableRow key={row.name}>
                   <TableCell align="center">{row.name}</TableCell>
-                  <TableCell align="center">{row.department}</TableCell>
-                  <TableCell align="center">{row.gender}</TableCell>
-                  <TableCell align="center">{row.dob}</TableCell>
+                  <TableCell align="center">{row.location}</TableCell>
+                  <TableCell align="center">{row.link}</TableCell>
+                  <TableCell align="center">{row.review}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

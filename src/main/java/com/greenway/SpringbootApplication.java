@@ -1,4 +1,4 @@
-package com.mukundmadhav.springboot.springboot;
+package com.greenway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
