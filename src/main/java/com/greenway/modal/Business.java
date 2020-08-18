@@ -17,10 +17,10 @@ public class Business {
 	private Integer id;
 
 	@Column
-	private String name;
+	private String bname;
 
 	@Column
-	private String location;
+	private String blocation;
 
 	@Column
 	private String link;
@@ -36,20 +36,20 @@ public class Business {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getBName() {
+		return bname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBName(String bname) {
+		this.bname = bname;
 	}
 
-	public String getLocation() {
-		return location;
+	public String getBLocation() {
+		return blocation;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setBLocation(String blocation) {
+		this.blocation = blocation;
 	}
 
 	public String getLink() {
@@ -70,12 +70,7 @@ public class Business {
 
 	@Override
 	public String toString() {
-		return "Business{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				", location='" + location + '\'' +
-				", link='" + link + '\'' +
-				", review='" + review + '\'' +
-				'}';
+		return "Business{" + "id=" + id + ", name='" + bname + '\'' + ", location='" + blocation + '\'' + ", link='"
+				+ link + '\'' + ", review='" + review + '\'' + '}';
 	}
 }

@@ -91,8 +91,8 @@ export default function SimpleTable() {
             <TableBody>
               {data?.map((row) => (
                 <TableRow key={row.name}>
-                  <TableCell align="center">{row.name}</TableCell>
-                  <TableCell align="center">{row.location}</TableCell>
+                  <TableCell align="center">{row.bname}</TableCell>
+                  <TableCell align="center">{row.blocation}</TableCell>
                   <TableCell align="center">{row.link}</TableCell>
                   <TableCell align="center">{row.review}</TableCell>
                 </TableRow>

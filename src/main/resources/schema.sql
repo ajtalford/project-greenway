@@ -7,14 +7,20 @@ use business;
 create table info
 (
     id int NOT NULL
-    AUTO_INCREMENT, name varchar
-    (255) DEFAULT NULL, location varchar
-    (255) DEFAULT NULL, link varchar
-    (255) DEFAULT NULL, review varchar (255) DEFAULT NULL, PRIMARY KEY
+    AUTO_INCREMENT, 
+    bname varchar
+    (255) DEFAULT NULL, 
+    blocation varchar
+    (255) DEFAULT NULL, 
+    link varchar
+    (255) DEFAULT NULL, 
+    review varchar
+    (255) DEFAULT NULL, 
+    PRIMARY KEY
     (id));
 
     insert into info
-        (id, name, location, link, review)
+        (id, bname, blocation, link, review)
     values('3', 'Skrimp Shack', 'Charlotte', 'skrimpshack.com', 'Amazing skrimps');
 
 

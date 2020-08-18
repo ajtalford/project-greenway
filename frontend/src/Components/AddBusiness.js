@@ -43,19 +43,19 @@ export default function AddBusiness() {
   const [firstLoad, setLoad] = React.useState(true);
 
   const [review, setReview] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [location, setLocation] = React.useState("");
+  const [bname, setBName] = React.useState("");
+  const [blocation, setBLocation] = React.useState("");
   const [link, setLink] = React.useState("");
 
   const handleReviewChange = (event) => setReview(event.target.value);
-  const handleNameChange = (event) => setName(event.target.value);
-  const handleLocationChange = (event) => setLocation(event.target.value);
+  const handleBNameChange = (event) => setBName(event.target.value);
+  const handleBLocationChange = (event) => setBLocation(event.target.value);
   const handleLinkChange = (event) => setLink(event.target.value);
 
   const [message, setMessage] = React.useState("Nothing saved in the session");
 
   async function sampleFunc(toInput) {
-    const response = await fetch("/api/employee", {
+    const response = await fetch("/api/business", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -76,10 +76,10 @@ export default function AddBusiness() {
   const handleSubmit = (variables) => {
     // if error check field original below
     // const toInput = { name, location, link, dob: selectedDate };
-    const toInput = { name, location, link, review };
+    const toInput = { bname, blocation, link, review };
     sampleFunc(toInput);
-    setName("");
-    setLocation("");
+    setBName("");
+    setBLocation("");
     setLink("");
     // if error check field
     setReview("");
@@ -112,25 +112,25 @@ export default function AddBusiness() {
                 variant="outlined"
                 required
                 fullWidth
-                id="name"
-                value={name}
+                id="bname"
+                value={bname}
                 label="Add a minority owned business"
-                name="name"
-                autoComplete="name"
-                onChange={handleNameChange}
+                name="bname"
+                autoComplete="bname"
+                onChange={handleBNameChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="location"
-                name="location"
+                name="blocation"
                 variant="outlined"
                 required
                 fullWidth
-                value={location}
-                id="location"
-                label="Location"
-                onChange={handleLocationChange}
+                value={blocation}
+                id="blocation"
+                label="BLocation"
+                onChange={handleBLocationChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
