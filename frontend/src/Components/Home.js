@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     "margin-top": "5%",
   },
   media: {
-    height: 310,
+    height: 400,
   },
 });
 

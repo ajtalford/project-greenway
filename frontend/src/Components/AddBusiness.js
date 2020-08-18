@@ -129,7 +129,7 @@ export default function AddBusiness() {
                 fullWidth
                 value={blocation}
                 id="blocation"
-                label="BLocation"
+                label="Location"
                 onChange={handleBLocationChange}
               />
             </Grid>
