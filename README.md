@@ -1,23 +1,9 @@
 
-# React, Spring Boot and MySQL webapp!
+# Project Greenway
+## Welcome to out App
+Here at Project Greenway our mission is to actively encourage the patronage and economic support of minority owned restaurants in the greater Charlotte community.
 
-Hey there! This app is an example application for anyone looking for a web app linking the backend capabilities of Spring Boot (with Hibernate) to excellent frontend offered by React. 
-
-![Application Home page](https://cdn-images-1.medium.com/max/1000/1*H4KTKqkilycIb1ebhvN85w.png)
-
-
-![List of all data in our React app](https://cdn-images-1.medium.com/max/1000/1*h8A68kGQpM6QoQYOCqux6g.png)
-
-If you would like to follow on the tutorial for the app you can visit the article on medium: [How to build and deploy React app with Spring Boot and MySQL server](https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600).
-
-## The purpose of the webapp
-
-The purpose of the app was to learn as to : 
-
- 1. How to build Spring Boot apps?
- 2. How to build React apps?
- 3. How to encapsulate the backend to the frontend?
- 4. How to deploy React and Spring Boot along with MySQL DB in my server?
+![Application Home page](https://i.ibb.co/Bq89L9K/Project-Green-Way-2-copy.gif)
 
 ### Installation
 
@@ -26,12 +12,9 @@ You'll need maven, npm and JAVA pre-installed, which most probably you'll alread
 ```sh
 $ mvn clean
 $ mvn package
-$ java -jar target/springboot-0.0.1-SNAPSHOT.jar
+$ java -jar target/project-greenway-0.0.1-SNAPSHOT.jar
 ```
 
+### Check out the app on Heroku:  
 
-####  PostScript
-
-I hope this app gives some insight on how to compile the backend and the frontend into a single executable file making deployment a breeze. 
-
-Happy coding 😃
+https://greenway-app.herokuapp.com
