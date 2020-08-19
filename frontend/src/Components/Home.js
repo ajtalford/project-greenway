@@ -9,16 +9,23 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import Box from "@material-ui/core/Box";
+import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
   root: {
-    // maxWidth: 345,
     "margin-left": "10%",
     width: "80%",
     "margin-top": "5%",
   },
   media: {
-    height: 310,
+    height: 400,
+  },
+  button: {
+    backgroundColor: "green",
+  },
+  text: {
+    textDecoration: "none",
+    color: "white",
   },
 });
 
@@ -45,11 +52,25 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" variant="contained" href="#contained-buttons">
-          <Link to="/view"> View Businesses</Link>
+        <Button
+          size="small"
+          variant="contained"
+          href="#contained-buttons"
+          className={classes.button}
+        >
+          <Link to="/view" className={classes.text}>
+            View Businesses
+          </Link>
         </Button>
-        <Button size="small" variant="contained" href="#contained-buttons">
-          <Link to="/add"> Add a Business</Link>
+        <Button
+          size="small"
+          variant="contained"
+          href="#contained-buttons"
+          className={classes.button}
+        >
+          <Link to="/add" className={classes.text}>
+            Add a Business
+          </Link>
         </Button>
       </CardActions>
     </Card>
